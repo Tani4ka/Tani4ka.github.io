@@ -1,0 +1,245 @@
+/* ---------------------------------------------------------
+                            Footer
+   ---------------------------------------------------------*/
+.footer {
+  padding: 27px 0 47px;
+  background: $main;
+  color: $white;
+  font-size: 18px;
+
+  @include media("<desktop") {
+    padding: 21px 0 40px;
+    font-size: 11px;
+  }
+  @include media("<tablet") {
+    padding: 21px 0;
+    text-align: center;
+  }
+
+  &_wrap {
+    padding: 0 20px;
+  }
+
+  &-info {
+    margin-bottom: 24px;
+
+    @include media("<desktop") {
+      line-height: 1.5em;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 16px;
+      order: -2;
+    }
+  }
+  
+  &__heading {
+    margin-bottom: 8px;
+    color: $accent;
+    font-size: 2.25em;
+    font-family: 'MontserratBold';
+
+    @include media("<desktop") {
+      margin-bottom: 2px;
+    }
+    @include media("<tablet") {
+      order: -3;
+    }
+  }
+  
+  &-headings {
+    margin-bottom: 20px;
+    font-family: 'SourceSansProBold';
+
+    @include media("<desktop") {
+      margin-bottom: 12px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+
+    @include media(">=tablet") {
+      margin-bottom: -15px;
+    }
+    @include media("<tablet") {
+      margin: 18px 0 27px;
+    }
+  }
+
+  &-menu {
+    @extend %listreset;
+    @include media(">=desktop") {
+      padding: 0 15px;
+    }
+    &__li {
+      @extend %transition;
+      
+      &:hover,
+      &:focus,
+      &.active {
+        outline: none;
+
+        .footer-menu__link {
+          color: $accent;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      padding: 0 0 13px 5px;
+      color: $white;
+      text-decoration: none;
+      text-transform: capitalize;
+
+      @include media("<desktop") {
+        padding: 0 0 0 18px;
+      }
+      @include media("<tablet") {
+        padding: 0;
+      }
+    }
+  }
+
+  &-copyright {
+    margin-bottom: 21px;
+    font-size: 0.89em;
+
+    @include media("<desktop") {
+      margin-bottom: 12px;
+    }
+    @include media("<tablet") {
+      order: 1;
+      margin: 12px 0 0;
+    }
+  }
+
+  &-form_wrap {
+    @include media("<tablet") {
+      order: -1;
+    }
+  }
+
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    height: 50px;
+
+    @include media("<desktop") {
+      width: 88%;
+      height: 24px;
+    }
+    @include media("<tablet") {
+      width: 57%;
+      margin: 0 auto;
+    }
+
+    .footer-form__text {
+      flex-grow: 1;
+      border-radius: 2px 0 0 2px;
+      padding: 0 0 0 20px;
+      border: 1px solid rgba(125, 125, 125, 0.6);
+      background: transparent;
+      color: $white;
+      text-transform: capitalize;
+
+      @include media("<desktop") {
+        font-size: 11px;
+        padding: 0 0 0 8px;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid rgba(125, 125, 125, 0.6);
+      }
+    }
+
+    &__button {
+      position: relative;
+      min-width: 50px;
+      height: 100%;
+      border: none;
+      border-radius: 0 2px 2px 0;
+      border: 1px solid rgba(125, 125, 125, 0.6);
+      border-left: none;
+      background: $accent;
+      @extend %transition;
+
+      @include media("<desktop") {
+        min-width: 26px;
+      }
+
+      &:before {
+        content: '\f105';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $main;
+        font-size: 30px;
+        font-family: 'Fontawesome';
+
+        @include media("<desktop") {
+          font-size: 18px;
+        }
+      }
+      &:hover,
+      &:focus {
+        outline: none;
+        background: darken($accent, 10%);
+      }
+    }
+  }
+
+  // social
+  &-soc_wrap {
+
+    @include media(">=tablet") {
+      padding-left: 20px;
+    }
+    @include media(">=desktop") {
+      padding: 0 20px;
+    }
+    .footer-headings {
+      @include media("<tablet") {
+        margin-bottom: 9px;
+      }
+    }
+  }
+  &-soc {
+    display: flex;
+    @extend %listreset;
+    font-size: 1.563em;
+    justify-content: space-between;
+
+    @include media("<desktop") {
+      font-size: 1.8em;
+    }
+    @include media("<tablet") {
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    &__link {
+      color: $accent;
+      font-family: 'FontAwesome';
+      text-decoration: none;
+      @extend %transition;
+
+      @include media("<tablet") {
+        padding: 0 10px;
+      }
+      &:hover,
+      &:focus {
+        color: darken($accent, 10%);
+      }
+    }
+  }
+}
+
+

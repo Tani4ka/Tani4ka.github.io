@@ -1,0 +1,1485 @@
+/* ---------------------------------------------------------
+                            Main
+   ---------------------------------------------------------*/
+
+/* features */
+.features {
+  padding: 50px 0 30px;
+
+  @include media("<desktop") {
+    padding: 19px 0 43px;
+  }
+  @include media("<tablet") {
+    padding: 25px 0 36px;
+  }
+
+  &__img {
+    background: url('../img/tv.png') no-repeat 0 0;
+    background-size: contain;
+
+    @include media("<desktop") {
+      background-size: cover;
+    }
+
+    @include media("<tablet") {
+      height: 170px;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__content {
+    padding-top: 38px;
+
+    @include media("<desktop") {
+      padding-top: 28px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 87px;
+
+    @include media(">=desktop") {
+      padding-right: 40px;
+    }
+    @include media("<tablet") {
+      padding-right: 30px;
+      padding-left: 70px;
+    }
+
+    &:before {
+      content: '\e800';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 80px;
+      font-family: 'hofmann-icon';
+      font-size: 45px;
+      text-align: center;
+
+      @include media("<desktop") {
+        top: 5px;
+        left: 15px;
+        font-size: 32px;
+      }
+      @include media("<tablet") {
+        left: -5px;
+      }
+    }
+
+    &_perfect:before {
+      content: '\e802';
+    }
+    &_layers:before {
+      content: '\e801';
+    }
+  }
+  &__heading {
+    margin-bottom: 11px;
+    text-transform: uppercase;
+
+    @include media("<desktop") {
+      margin-bottom: 9px;
+    }
+  }
+  &__text {
+    margin-bottom: 38px;
+    font-family: 'SourceSansProLight';
+
+    @include media("<desktop") {
+      line-height: 1.5em;
+      margin-bottom: 72px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 41px;
+    }
+
+    &_last {
+      @include media("<tablet") {
+        margin-bottom: 21px;
+      }
+    }
+  }
+}
+
+
+/* download */
+.download {
+  height: 588px;
+  background: $main url("../img/download-bg.jpg") no-repeat center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+
+  @include media("<desktop") {
+    height: 314px;
+  }
+  @include media("<tablet") {
+    height: 312px;
+  }
+  
+  &_wrap {
+    margin: auto;
+  }
+  
+  .heading {
+    color: $white;
+    margin-bottom: 16px;
+
+    @include media("<desktop") {
+      margin: 21px 0;
+    }
+    @include media("<tablet") {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    padding: 0 15px;
+
+    @include media("<desktop") {
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__btn {
+    margin: 42px 0 60px;
+
+    @include media("<desktop") {
+      padding: 1.1em 3.45em;
+      margin: 0 0 59px;
+    }
+    @include media("<tablet") {
+      padding: 0.74em 3.25em;
+      margin: 4px 0 72px;
+    }
+  }
+}
+
+//testimo
+.testimo {
+  padding: 42px 0 11px;
+
+  @include media("<desktop") {
+    padding: 19px 0 15px;
+  }
+  @include media("<tablet") {
+    padding: 28px 0 0;
+  }
+
+  .wrap-flex {
+    @include media(">=desktop") {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .heading {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    position: relative;
+    padding: 44px 40px 25px 42px;
+    margin: 0 15px 49px 15px;
+    height: 91%;
+    display: flex;
+    flex-direction: column;
+
+    @include media(">=desktop") {
+      &:hover {
+        box-shadow: 0 0 8px 5px #e6e6e6;
+        border-radius: 8px;
+      }
+    }
+    @include media("<desktop") {
+      padding: 32px 40px 23px 14px;
+      margin:  0 0 0 15px;
+      line-height: 1.5em;
+    }
+    @include media("<tablet") {
+      padding: 8px 10px 18px 0;
+      margin: 0 0 15px 10px;
+    }
+
+    //&:before {
+    //  content: '';
+    //  @include size(96px);
+    //  position: absolute;
+    //  top: 44px;
+    //  left: 41px;
+    //  border-radius: 10em;
+    //  background: $gray url("../img/person/person-1.jpg") no-repeat;
+    //  background-size: cover;
+    //
+    //  @include media("<desktop") {
+    //    @include size(62px);
+    //    top: 32px;
+    //    left: 14px;
+    //  }
+    //  @include media("<tablet") {
+    //    @include size(48px);
+    //    top: 10px;
+    //    left: 0;
+    //  }
+    //}
+
+
+    //&_second:before  {
+    //  background: $gray url("../img/person/person-2.jpg") no-repeat;
+    //  background-size: cover;
+    //}
+    //&_third:before  {
+    //  background: $gray url("../img/person/person-3.jpg") no-repeat;
+    //  background-size: cover;
+    //}
+    //&_fought:before  {
+    //  background: $gray url("../img/person/person-4.jpg") no-repeat;
+    //  background-size: cover;
+    //}
+
+    .slesh {
+      position: absolute;
+      top: 180px;
+      left: 67px;
+      @include size(36px);
+
+      @include media("<desktop") {
+        @include size(20px, 18px);
+        top: 126px;
+        left: 35px;
+      }
+      @include media("<tablet") {
+        top: 95px;
+        left: 10px;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 11px;
+        height: 100%;
+        background: #e6e6e6;
+        transform: skew(-15deg);
+
+        @include media("<desktop") {
+          width: 6px;
+        }
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  &__img_wrap {
+    display: inline-block;
+    @include size(96px);
+
+    @include media("<desktop") {
+      @include size(62px);
+    }
+    @include media("<tablet") {
+      @include size(48px);
+    }
+  }
+  &__img {
+    max-width: 100%;
+  }
+
+
+  &__text {
+    padding-left: 126px;
+    margin-top: -10px;
+
+    @include media("<desktop") {
+      padding-left: 90px;
+    }
+    @include media("<tablet") {
+      padding-left: 65px;
+    }
+  }
+  &__name {
+    margin: 0 0 0 25px;
+    display: inline-block;
+    vertical-align: top;
+
+    @include media("<desktop") {
+      margin: 4px 0 0 25px;
+    }
+    @include media("<tablet") {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  &__job {
+    display: block;
+    text-transform: none;
+    color: $gray;
+    text-decoration: none;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 15px;
+
+    @include media("<desktop") {
+      padding-bottom: 10px;
+      margin: 10px 0 22px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  .testimo-soc {
+    padding-left: 126px;
+    margin-top: auto;
+    display: flex;
+    @extend %listreset;
+
+    @include media("<desktop") {
+      padding-left: 90px;
+      margin-top: 16px;
+    }
+    @include media("<tablet") {
+      padding-left: 65px;
+    }
+
+    &__link {
+      color: $accent;
+      margin-right: 12px;
+      font-size: 22px;
+      font-family: 'FontAwesome';
+      text-decoration: none;
+      @extend %transition;
+
+      &:hover,
+      &:focus {
+        color: darken($accent, 15%);
+      }
+    }
+  }
+}
+
+
+/* plan section */
+.radio_wrap {
+  justify-content: center;
+}
+
+@include media("<tablet") {
+
+  .plan__label {
+    margin: 0 5px;
+    padding: 0.05em 1.1em;
+    width: 80px;
+    border-radius: 10em;
+    background: transparent;
+    color: $main;
+    font-size: 12px;
+    font-family: 'SourceSansProBold';
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    transition: all 0.3s ease;
+
+    &:focus {
+     outline: none;
+    }
+    &:hover {
+      background: $accent;
+    }
+  }
+
+  .plan__radio + .plan__label {
+    cursor: pointer;
+  }
+  .plan__radio {
+    display: none; //opacity: 1;
+  }
+  .plan__radio:checked + .plan__label {
+    background: $accent;
+  }
+  .plan__radio_s:checked ~ .card_wrap .card_silver {
+    z-index: 10;
+    top: 20px;
+    transform: scale(1);
+  }
+  .plan__radio_s:checked ~ .card_wrap .card_gold {
+    top: 10px;
+    transform: scaleX(0.85);
+  }
+  .plan__radio_p:checked ~ .card_wrap .card_plat {
+    z-index: 10;
+    top: 20px;
+    transform: scale(1);
+  }
+  .plan__radio_p:checked ~ .card_wrap .card_gold {
+    top: 10px;
+    transform: scaleX(0.85);
+  }
+  .plan__radio_p:checked ~ .card_wrap .card_silver {
+    top: 0px;
+    transform: scaleX(0.75);
+  }
+}
+
+
+/* plan card */
+.plan {
+  padding: 38px 0 95px;
+  background: $light-gray;
+
+  @include media("<desktop") {
+    padding: 32px 0 63px;
+  }
+  @include media("<tablet") {
+    padding: 42px 0 40px;
+  }
+}
+
+.card_wrap {
+   position: relative;
+   margin-bottom: 6px;
+   padding: 17px 0;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+
+   @include media("<desktop") {
+     padding: 9px 0;
+   }
+   @include media("<tablet") {
+     height: 268px;
+     margin-top: 19px;
+     margin-bottom: 40px;
+     order: -1;
+   }
+ }
+
+.card {
+  padding: 44px 0 36px;
+  width: 270px;
+  color: $white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px -3px #c2c2c2;
+
+  @include media("<desktop") {
+    padding: 28px 0 33px;
+    width: 170px;
+  }
+  @include media("<tablet") {
+    padding: 20px 0 29px;
+    position: absolute;
+    width: 191px;
+  }
+
+  &_plat {
+    background: $main;
+
+    @include media("<tablet") {
+      z-index: 1;
+      top: 0;
+      transform: scaleX(0.725);
+    }
+  }
+
+  &_silver {
+    background: #666;
+
+    @include media("<tablet") {
+      z-index: 2;
+      top: 10px;
+      transform: scaleX(0.85);
+    }
+  }
+
+  &_gold {
+    background: $accent;
+    color: $main;
+
+    @include media(">=tablet") {
+      margin: 0 5.8%;
+    }
+    @include media("<tablet") {
+      z-index: 3;
+      top: 20px;
+    }
+    .card__name {
+      color: $main;
+    }
+  }
+  &__name {
+    color: $accent;
+    margin-bottom: 12px;
+
+    @include media("<desktop") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__number {
+    position: relative;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 4em;
+    font-family: 'MontserratBold';
+    line-height: 1.3em;
+
+    @include media("<desktop") {
+      font-size: 3.27em;
+      line-height: 1.0em;
+    }
+    @include media("<tablet") {
+      line-height: 0.3em;
+    }
+
+    //&:before {
+    //  content: '$';
+    //  position: absolute;
+    //  top: -2px;
+    //  left: -10px;
+    //  font-size: 24px;
+    //  font-family: 'MontserratRegular';
+    //
+    //  @include media("<desktop") {
+    //    top: 5px;
+    //    left: 0;
+    //    font-size: 11px;
+    //  }
+    //  @include media("<tablet") {
+    //    top: 14px;
+    //  }
+  }
+
+  &__dolor {
+    position: relative;
+    top: 22px;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    font-family: 'MontserratRegular';
+
+    @include media("<desktop") {
+      top: 5px;
+      font-size: 11px;
+    }
+    @include media("<tablet") {
+      vertical-align: top;
+      top: -14px;
+    }
+  }
+
+
+  &__year {
+    margin-bottom: 27px;
+    display: block;
+    font-size: 1.125em;
+    font-family: 'SourceSansProBold';
+    font-size: 1.5em;
+    text-transform: uppercase;
+
+    @include media("<desktop") {
+      margin-bottom: 12px;
+      font-size: 1.09em;
+    }
+    @include media("<tablet") {
+      margin-bottom: 15px;
+      line-height: 1.5em;
+    }
+  }
+
+  &__list {
+    @extend %listreset;
+  }
+  &__item {
+    text-transform: capitalize;
+
+    @include media("<desktop") {
+      line-height: 1.5em;
+    }
+  }
+
+  .btn {
+    margin-top: 28px;
+
+    @include media("<desktop") {
+      margin-top: 20px;
+      padding: 1.1em 2.7em;
+    }
+    @include media("<tablet") {
+      margin-top: 25px;
+      padding: 0.7em 3.5em;
+    }
+  }
+}
+
+
+/* portfolio section */
+.portf {
+  position: relative;
+  padding: 35px 0 71px;
+
+  @include media("<desktop") {
+    padding: 5px 0 71px;
+  }
+  @include media("<tablet") {
+    padding: 27px 0 71px;
+  }
+  
+  .slick-slide:focus {
+    outline: none;
+  }
+
+  // arrows
+  .slick-arrow {
+    position: absolute;
+    bottom: 17px;
+    font-size: 0;
+    border: 0;
+    background: transparent;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      border-top: 2px solid $gray;
+      border-left: 2px solid $gray;
+    }
+    &:focus,
+    &:hover {
+      outline: none;
+      &:before,
+      &:after {
+        border-color: $accent;
+      }
+    }
+  }
+  .slick-prev {
+    left: 38.2%;
+
+    @include media("<desktop") {
+      left: 31%;
+    }
+    @include media("<tablet") {
+      left: 13%;
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+  .slick-next {
+    right: 38.2%;
+
+    @include media("<desktop") {
+      right: 31%;
+    }
+    @include media("<tablet") {
+      right: 13%;
+    }
+    &:before {
+      transform: rotate(135deg);
+    }
+  }
+
+  // dots
+  .slick-dots {
+    margin: 61px auto 0;
+    width: 40%;
+    @extend %listreset;
+    text-align: center;
+    font-size: 18px;
+
+    @include media("<desktop") {
+      margin: 45px auto 0;
+      font-size: 12px;
+    }
+    @include media("<tablet") {
+      margin: 26px auto 0;
+      width: 100%;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 1.5%;
+
+      @include media("<desktop") {
+        margin: 0 2.8%;
+      }
+      @include media("<tablet") {
+        margin: 0 1%;
+      }
+      &:focus,
+      &:hover,
+      &.slick-active {
+        button {
+          color: $accent;
+          outline: none;
+          box-shadow: 1px 1px 5px #ccc;
+        }
+      }
+    }
+    button {
+      border: none;
+      border-radius: 10em;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      font-family: 'MontserratRegular';
+    }
+  }
+}
+
+.portf-slick {
+  padding-top: 18px;
+
+  @include media("<desktop") {
+    padding-top: 7px;
+  }
+  @include media("<tablet") {
+    padding-top: 0px;
+  }
+}
+
+.portf-figure_wrap {
+  padding: 0 15px;
+  width: 100% !important;
+
+  @include media("<desktop") {
+    padding: 0px 25px 0;
+  }
+  @include media("<tablet") {
+    padding: 13px 15px 0;
+  }
+}
+
+.portf__figure {
+  position: relative;
+  width: 33.333%;
+
+  @include media("<tablet") {
+    width: 50%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    @extend %transition;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  
+  &_2,
+  &_3 {
+    width: 66.666%;
+    @include media("<tablet") {
+      width: 100%;
+    }
+  }
+  &_6 {
+    padding: 30px;
+
+    @include media("<tablet") {
+      width: 100%;
+      height: 145px;
+    }
+    &:hover:before {
+      opacity: 0;
+    }
+  }
+  @include media("<tablet") {
+    &_2 {
+      order: 2;
+    }
+    &_3 {
+      order: 4;
+    }
+    &_4, &_5{
+      order: 3;
+    }
+    &_6 {
+      order: 6;
+    }
+  }
+}
+.portf__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// content
+.portf {
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 48px 40px 40px;
+    color: $white;
+    opacity: 0;
+    @extend %transition;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    @include media("<desktop") {
+      padding: 47px 20px 20px;
+    }
+    @include media("<tablet") {
+     padding: 0px 20px 0px 27px;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    position: relative;
+  }
+
+  &__figure:hover {
+    .portf__content {
+      opacity: 1;
+    }
+  }
+
+  @include media(">=tablet") {
+    &__figure_2,
+    &__figure_3 {
+      .portf__content {
+        width: 50%;
+        left: 50%;
+      }
+    }
+  }
+
+  &__heading {
+    position: relative;
+    text-transform: capitalize;
+
+    @include media("<tablet") {
+      font-size: 16px;
+      padding-right: 55px;
+    }
+  }
+  &__date {
+    position: relative;
+    padding-bottom: 38px;
+    margin: 7px 0 40px;
+    font-size: 1.125em;
+    background: transparent !important;
+
+    @include media("<desktop") {
+      margin: 2px 0 24px;
+      padding-bottom: 18px;
+    }
+    @include media("<tablet") {
+      margin: 3px 0 20px;
+      padding-bottom: 16px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      @include size(32px, 6px);
+      background: $white;
+
+      @include media("<desktop") {
+        @include size(16px, 4px);
+        left: 0;
+      }
+      @include media("<tablet") {
+        @include size(14px, 4px);
+      }
+    }
+  }
+  &__text {
+    line-height: 1.5em;
+    margin-bottom: 22px;
+
+    @include media("<desktop") {
+      margin-bottom: 10px;
+    }
+    @include media("<400px") {
+      display: none;
+    }
+  }
+  &__status {
+
+     &-link {
+       position: relative;
+       padding: 0 20px 0 30px;
+       display: inline-block;
+       font-size: 12px;
+       color: $white;
+       text-decoration: none;
+
+       @include media("<desktop") {
+         padding: 0 10px 0 25px;
+       }
+       @include media("<tablet") {
+         display: none;
+       }
+
+       &:focus,
+       &:hover {
+         outline: none;
+         color: $accent;
+         cursor: pointer;
+       }
+
+       &:before {
+         content: '\e803';
+         position: absolute;
+         left: 5px;
+         top: 0;
+         font-family: 'hofmann-icon';
+
+         @include media("<desktop") {
+           left: 0;
+         }
+       }
+       &:nth-child(2):before {
+         content: '\e804';
+       }
+       &:nth-child(3):before {
+         content: '\e805';
+       }
+
+       &_eye {
+         @include media("<tablet") {
+           position: absolute;
+           top: 0px;
+           right: 9px;
+           font-size: 0;
+           display: block;
+
+           &:before {
+             font-size: 10px;
+           }
+         }
+       }
+     }
+  }
+  
+  &__figure_6 {
+    .portf__content {
+      padding: 75px 40px 40px;
+      color: $main;
+      background: $light-gray;
+      opacity: 1;
+
+      @include media("<desktop") {
+        padding: 21px 22px 40px;
+      }
+      @include media("<tablet") {
+        padding: 17px 25px 0px;
+      }
+    }
+    .portf__date {
+      margin-bottom: 30px;
+      padding-bottom: 38px;
+      text-transform: uppercase;
+
+      @include media("<desktop") {
+        padding-bottom: 26px;
+        margin-bottom: 17px;
+      }
+      @include media("<tablet") {
+        padding-bottom: 7px;
+        margin-bottom: 8px;
+      }
+
+      &:after {
+        background: $main;
+      }
+    }
+    .portf__text {
+      line-height: 1em;
+      text-transform: capitalize;
+
+      @include media("<desktop") {
+        font-size: 36px;
+        line-height: 1.2em;
+      }
+      @include media("<tablet") {
+        font-size: 34px;
+      }
+      @include media("<400px") {
+        display: block;
+      }
+    }
+  }
+}
+
+/* reviews */
+
+.reviews_wrap {
+  padding: 226px 0 67px;
+  color: $white;
+  background: $main url("../img/category-bg.jpg") no-repeat;
+  background-size: cover;
+
+  @include media("<desktop") {
+    padding: 103px 0 15px;
+  }
+  @include media("<tablet") {
+    padding: 35px 0 58px;
+    background-position: 10% 0;
+  }
+
+  &.overlay:before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.reviews {
+  padding: 0 100px 0 18px;
+
+  @include media("<desktop") {
+    padding: 0 80px 0 15px;
+  }
+  @include media("<tablet") {
+    padding: 0 30px 0 26px;
+  }
+
+  &:focus,
+  &__item:focus {
+    outline: none;
+  }
+
+  &__heading {
+    margin-bottom: 12px;
+    font-family: 'MontserratRegular';
+    text-transform: capitalize;
+
+    @include media("<desktop") {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__prof {
+    margin-bottom: 25px;
+    display: block;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    font-family: 'SourceSansProRegular';
+
+    @include media("<desktop") {
+      margin-bottom: 11px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @include media("<desktop") {
+      line-height: 1.5;
+    }
+  }
+
+  .slick-dots {
+    list-style-type: none;
+    position: absolute;
+    font-size: 0;
+    z-index: 10;
+
+
+    @include media(">=tablet") {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-40%);
+    }
+    @include media(">=desktop") {
+       right: 0;
+      transform: translateY(-50%);
+    }
+    @include media("<tablet") {
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    li {
+      @include size(10px);
+      margin: 11px 0;
+
+      @include media("<desktop") {
+        margin: 7px 0;
+      }
+
+      @include media("<tablet") {
+        display: inline-block;
+        margin: 0 4px;
+      }
+    }
+
+    button {
+      @include size(10px);
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid $white;
+      padding: 0;
+
+      @include media("<desktop") {
+        @include size(8px);
+      }
+    }
+
+    li:focus,
+    button:focus {
+      outline: none;
+    }
+
+    .slick-active {
+      button {
+        background: $white;
+      }
+    }
+  }
+}
+
+/* touch */
+.touch_wrap {
+  margin: 70px 0 0;
+
+  @include media("<desktop") {
+    margin: 30px 0 0;
+  }
+  @include media("<tablet") {
+    margin: 30px 0;
+  }
+}
+.touch {
+  margin-top: 72px;
+  margin-bottom: 67px;
+
+  @include media("<desktop") {
+    margin-top: 39px;
+    margin-bottom: 39px;
+    padding: 0 12px;
+  }
+  @include media("<tablet") {
+    margin-top: 23px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    line-height: 1em;
+  }
+
+  &__img {
+    max-width: 100%;
+    display: block;
+  }
+
+  &__form {
+    @include media(">=desktop") {
+      padding: 0 12px;
+    }
+  }
+
+  .touch__input {
+    margin-bottom: 41px;
+    padding: 2px 0 8px;
+    width: 46%;
+    border: none;
+    border-bottom: 1px solid $gray;
+    color: $main;
+    font-size: 1.125em;
+
+    @include media("<desktop") {
+      padding: 2px 0 3px;
+      margin-bottom: 20px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $gray;
+    }
+    &_name {
+      margin-right: 6%;
+    }
+    &_message {
+      display: block;
+      margin-bottom: 60px;
+      width: 100%;
+
+      @include media("<desktop") {
+        margin-bottom: 31px;
+      }
+      @include media("<tablet") {
+        margin-bottom: 19px;
+      }
+    }
+
+    &::-webkit-input-placeholder { color: $gray; }
+    &::-moz-placeholder { color: $gray; }
+    &:-moz-placeholder  { color: $gray; }
+    &:-ms-input-placeholder { color: $gray; }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.75em 4.6em;
+
+  }
+
+  &__adress,
+  &__email,
+  &__tel_wrap {
+    padding: 0 30px;
+    margin-bottom: 24px;
+    display: block;
+    position: relative;
+    color: $main;
+    text-decoration: none;
+    @extend %transition;
+
+    @include media("<desktop") {
+      margin-bottom: 8px;
+    }
+    @include media("<tablet") {
+      line-height: 1.5em;
+    }
+
+    &:before {
+      content: '\f0e0';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      text-align: center;
+      font-family: 'fontawesome';
+
+      @include media("<desktop") {
+        font-size: 1.55em;
+      }
+    }
+  }
+  &__adress:before {
+    content: '\f041';
+  }
+
+  &__email,
+  &__tel_wrap {
+    &:hover {
+      color: darken($accent, 10%);
+    }
+  }
+
+  &__tel_wrap {
+    margin-bottom: 40px;
+
+    @include media("<desktop") {
+      margin-bottom: 17px;
+    }
+    @include media("<tablet") {
+      margin-bottom: 22px;
+    }
+    &:before {
+      content: '\f095';
+    }
+  }
+
+  &__tel {
+    white-space: nowrap;
+    color: $main;
+    text-decoration: none;
+    @extend %transition;
+
+    &:hover {
+      color: darken($accent, 10%);
+    }
+  }
+
+  //social
+  &-soc {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %listreset;
+    font-size: 1.563em;
+
+    @include media("<desktop") {
+      font-size: 2em;
+    }
+
+    li+li {
+      margin-left: 12.5%;
+
+      @include media("<desktop") {
+        margin-left: 30px;
+      }
+      @include media("<tablet") {
+        margin-left: 34px;
+      }
+    }
+
+    &__link {
+      color: $gray;
+      font-family: 'FontAwesome';
+      text-decoration: none;
+      @extend %transition;
+
+      &:hover,
+      &:focus {
+        color: darken($accent, 10%);
+      }
+    }
+  }
+}
+
+/* map section */
+.map {
+  position: relative;
+}
+#map {
+  width: 100%;
+  height: 400px;
+  background: $light-gray;
+
+  @include media("<desktop") {
+    height: 216px;
+  }
+  @include media("<tablet") {
+    height: 268px;
+  }
+}
+
+//a[href^="http://maps.google.com/maps"]{display:none !important}
+//
+//.gmnoprint a, .gmnoprint span {
+//  display:none;
+//}
+//.gmnoprint div {
+//  background:none !important;
+//}
+//#GMapsID div div a div img{
+//  display:none;
+//}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-45%);
+  padding: 19px 16px 21px 28px;
+  border-radius: 4px;
+  background: $accent;
+  font-size: 12px;
+  white-space: nowrap;
+  line-height: 1.3em;
+  //box-shadow: 0 2px 5px 1px rgba(0,0,0,.5);
+  -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,.5));
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.5));
+
+  @include media("<desktop") {
+    top: 32%;
+  }
+  @include media("<tablet") {
+    top: 35%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    border-left: 20px solid $accent;
+    border-bottom: 15px solid transparent;
+    transform: translateX(-25%) rotate(-27deg);
+  }
+
+  &_bold {
+    display: block;
+    font-family: 'SourceSansProBold';
+  }
+}
+
+
+
+
+
+
+
+
+
+// @extend %flex;           // flex-wrap:wrap; justify-content:space-between; align-items:center; display:flex;
+// @extend %clearfix;       // &:after { content:''; display:block; clear:both; }
+// @extend %transition;     // (all 0.5s ease)
+// @extend %listreset;      // (margin:0; padding:0; list-style: none;)
+// @extend %ellipsis;       // Match text...
+
+
+// @include animate(color)          // (transform opacity, .6s) // (visibility opacity); (0.3s ease-in-out)
+// @include size(16px)              // (15px, 4px);
+// @include v-align(100%);          // vertical align el inside parent with fixed height/min-height
+// @include placeholder;            // input { @include placeholder {color: red;} }
+// @include hide-text;              // overflow:hidden; text-indent:101%; white-space:nowrap;
+// @include center_transform();     // left:50%; top:50%; transform:translate(-50%, -50%); position:absolute;
+// @include verrical_center_transform();    // left:0; top:50%; width: 100%; transform:translate(0, -50%); position:absolute;
+// @include font(14px, 18px, #000);         // font-size, line-height, color
+// @include triangle(20px, red, up);
+// @include animate(color width, 1s, linear);
+// @include gradient(left, right, rgba(0,0,0,1), rgba(255,255,255,1));
+
+// font: italic 15px/1.75em 'Times New Roman';
+
+
+
+//@include media("<phone") {}
+
+//@include media(">=phone") {}
+
+//@include media("<tablet") {}
+
+//@include media(">=tablet") {}
+
+//@include media("<desktop") {}
+
+//@include media(">=desktop") {}
+
+//@include media("<1200px") {}
+
+//@include media(">=1200px") {}
+
+//@include media("<1200px", ">=desktop") {}
+
+
+
+
+
+
+

@@ -1,0 +1,448 @@
+/* ---------------------------------------------------------
+                           Header
+   ---------------------------------------------------------*/
+.header {
+  background-image: url('../img/header_bg.jpg');
+
+  &__heading {
+    position: relative;
+    color: $white;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 65px auto 51px;
+    font-family: 'SourceSansProRegular';
+    line-height: 1.1em;
+
+    @include media("<desktop") {
+      margin: 0 auto 34px;
+      font-size: 2.9em;
+    }
+    @include media("<tablet") {
+      margin: 0 auto 57px;
+      line-height: 1.25em;
+      font-size: 2.3em;
+    }
+    @include media("<480px") {
+      font-size: 1.8em;
+    }
+  }
+}
+.video_wrap {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media("<desktop") {
+    top: 138px;
+  }
+  @include media("<tablet") {
+    top: 135px;
+  }
+}
+.video {
+  position: relative;
+  width: 555px;
+  height: 324px;
+  margin: 0 auto;
+
+  @include media("<desktop") {
+    width: 345px;
+    height: 201px;
+  }
+
+  @include media("<tablet") {
+    width: 240px;
+    height: 140px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url("../img/video-img.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  &__start {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 10em;
+    background: rgba(255, 255, 255, .6);
+
+    @include media("<desktop") {
+      width: 56px;
+      height: 56px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-35%, -50%);
+      border-bottom: 12px solid transparent;
+      border-left: 18px solid rgba(0, 0, 0, .5);
+      border-top: 12px solid transparent;
+
+      @include media("<desktop") {
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid rgba(0, 0, 0, .5);
+        border-top: 8px solid transparent;
+      }
+    }
+  }
+
+  .fluid-width-video-wrapper {
+    iframe {
+      margin: 0;
+      min-height: auto;
+      width: 555px;
+      height: 324px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: none;
+
+      @include media("<desktop") {
+        width: 345px;
+        height: 201px;
+      }
+
+      @include media("<tablet") {
+        width: 240px;
+        height: 140px;
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 10;
+  padding: 0 2px;
+
+  @include media("<desktop") {
+    padding: 7px 8px;
+  }
+  @include media("<tablet") {
+    padding: 7px 2px;
+    order: -2;
+  }
+}
+
+.social {
+  display: flex;
+  @extend %listreset;
+
+  @include media("<tablet") {
+    order: -1;
+  }
+  .header-fake & {
+    @include media("<tablet") {
+      display: flex;
+    }
+  }
+  
+  &__link {
+    display: block;
+    padding: 2px 0;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    font-family: 'FontAwesome';
+    @extend %transition;
+
+    @include media(">=desktop") {
+      margin-left: 45px;
+    }
+    @include media("<desktop") {
+      font-size: 1.73em;
+      padding: 5px 10px;
+    }
+
+    .header-fake & {
+      @include media("<tablet") {
+        color: $gray;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+
+/* main navigation styles */
+.top-line {
+  position: relative;
+
+  @include media(">=desktop") {
+    padding-top: 56px;
+  }
+  @include media("<desktop") {
+    padding-top: 32px;
+  }
+  @include media("<tablet") {
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  &.sticky {
+    position: fixed;
+    background: $white;
+    color: #0e1034;
+
+    &.header-fake {
+      opacity: 1;
+    }
+  }
+
+  &.header-fake {
+    width: 100%;
+    opacity: 0;
+    transition: none !important;
+    z-index: 2;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2), 0 -1px 0 0 rgba(0, 0, 0, 0.2) inset;
+    background: $white;
+    color: $gray;
+
+    @include media(">=tablet") {
+      padding: 4px 10px 8px;
+    }
+    @include media(">=desktop") {
+      padding: 14px 10px 11px;
+    }
+
+    &.sticky {
+      z-index: 1001;
+      font-size: 1.09em;
+    }
+  }
+}
+
+#nav {
+  @include media(">=tablet") {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  @include media(">=desktop") {
+    justify-content: flex-end;
+  }
+}
+
+.nav-slide {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %listreset;
+
+  @include media(">=tablet") {
+    margin-left: 75px;
+  }
+
+  @include media(">=desktop") {
+    margin-right: 80px;
+  }
+
+  @include media("<tablet") {
+    @include animate(opacity visibility);
+
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+
+    .nav-active & {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .header-fake & {
+      top: 44px;
+      font-size: 11px;
+    }
+  }
+
+  .menu__li {
+    @include media("<tablet") {
+      background: $gray;
+      border-radius: 18px;
+      margin: 2px 5px;
+      width: 80%;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+        .menu__link {
+          color: $accent;
+        }
+    }
+  }
+
+  .menu__link {
+    display: block;
+    padding: 10px 25px;
+    color: $white;
+    text-decoration: none;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    @extend %transition;
+
+    @include media("<desktop") {
+      padding: 10px 19px;
+      font-size: 1.09em;
+    }
+    @include media("<tablet") {
+      padding: 5px 20px;
+      color: $white;
+      text-align: center;
+    }
+  }
+}
+
+.top-line.header-fake {
+  @include media(">=tablet") {
+    display: none !important;
+  }
+}
+
+/* burger button styles */
+.nav-opener {
+  @include size(16px, 14px);
+  display: block;
+  position:relative;
+  z-index: 100;
+
+  @include media(">=tablet") {
+    display: none;
+  }
+
+  &:before,
+  &:after,
+  span{
+    @include animate(all);
+    background: $white;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 16px;
+
+    .header-fake &,
+    .members-area & {
+      background: $main;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    top: 0px;
+  }
+
+  &:after {
+    width: 8px;
+    left: 8px;
+    top: 12px;
+  }
+}
+
+/* close button transition */
+//.close-btn span,
+.nav-active .nav-opener span{opacity:0;}
+.nav-opener:hover{opacity:.8;}
+.close-btn:after,
+.close-btn:before,
+.nav-active .nav-opener:after,
+.nav-active .nav-opener:before{
+  background: $main;
+  transform:rotate(45deg);
+  top:5px;
+  left:0;
+  right:0;
+}
+.nav-active .nav-slide {
+  z-index: 5;
+}
+.nav-active .nav-opener:after {
+  width: 100%;
+}
+
+.close-btn:after,
+.nav-active .nav-opener:after{
+  transform:rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+// @extend %flex;           // flex-wrap:wrap; justify-content:space-between; align-items:center; display:flex;
+// @extend %clearfix;       // &:after { content:''; display:block; clear:both; }
+// @extend %transition;     // (all 0.5s ease)
+// @extend %listreset;      // (margin:0; padding:0; list-style: none;)
+// @extend %ellipsis;       // Match text...
+
+
+// @include animate(color)          // (transform opacity, .6s) // (visibility opacity); (0.3s ease-in-out)
+// @include size(16px)              // (15px, 4px);
+// @include v-align(100%);          // vertical align el inside parent with fixed height/min-height
+// @include placeholder;            // input { @include placeholder {color: red;} }
+// @include hide-text;              // overflow:hidden; text-indent:101%; white-space:nowrap;
+// @include center_transform();     // left:50%; top:50%; transform:translate(-50%, -50%); position:absolute;
+// @include verrical_center_transform();    // left:0; top:50%; width: 100%; transform:translate(0, -50%); position:absolute;
+// @include font(14px, 18px, #000);         // font-size, line-height, color
+// @include triangle(20px, red, up);
+// @include animate(color width, 1s, linear);
+// @include gradient(left, right, rgba(0,0,0,1), rgba(255,255,255,1));
+
+// font: italic 15px/1.75em 'Times New Roman';
+
+
+
+//@include media("<phone") {}
+
+//@include media(">=phone") {}
+
+//@include media("<tablet") {}
+
+//@include media(">=tablet") {}
+
+//@include media("<desktop") {}
+
+//@include media(">=desktop") {}
+
+//@include media("<1200px") {}
+
+//@include media(">=1200px") {}
+
+//@include media("<1200px", ">=desktop") {}

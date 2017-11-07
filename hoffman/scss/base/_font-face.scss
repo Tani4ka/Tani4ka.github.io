@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------
+                           Font-face
+   ---------------------------------------------------------*/
+@include font-face("SourceSansProRegular", "../fonts/SourceSansPro-Regular/sourcesanspro-regular-webfont");
+@include font-face("SourceSansProBold", "../fonts/SourceSansPro-Bold/sourcesanspro-bold-webfont");
+@include font-face("SourceSansProLight", "../fonts/SourceSansPro-Light/sourcesanspro-light-webfont");
+@include font-face("SourceSansProIt", "../fonts/SourceSansPro-It/sourcesanspro-it-webfont");
+
+@include font-face("MontserratBold", "../fonts/Montserrat-Bold/montserrat-bold-webfont");
+@include font-face("MontserratRegular", "../fonts/Montserrat-Regular/montserrat-regular-webfont");
